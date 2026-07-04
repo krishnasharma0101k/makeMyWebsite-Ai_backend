@@ -21,6 +21,16 @@ const generateResponse = (prompt) => {
         content: prompt,
       },
     ],
+    temperature: 0.2,
   }),
 });
+
+if (!res.ok) {
+   const error = await res.text();
+   throw new Error(error);
+}
+
+const data = await res.json();
+return data
+
 }
