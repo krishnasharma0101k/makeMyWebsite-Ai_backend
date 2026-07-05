@@ -42,5 +42,5 @@ const websiteSchema = new mongoose.Schema({
     
 
 },{timestamps: true});
-const website = mongoose.model("website", websiteSchema)
-export default website
+const Website = mongoose.model("website", websiteSchema)
+export default Website
