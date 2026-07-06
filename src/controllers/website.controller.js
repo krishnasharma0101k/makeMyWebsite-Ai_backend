@@ -198,7 +198,7 @@ export const generateWebsite = async (req, res) => {
         const website = await Website.create({
             user: user._id,
             title: prompt.slice(0, 50),
-            lastestCode: parsed.code,
+            latestCode: parsed.code,
             conversation: [
                 {
                     role: "ai",
@@ -220,9 +220,10 @@ export const generateWebsite = async (req, res) => {
             remainingCredits: user.credits,
         });
 
-    } catch (error) {
-        return res.status(500).json({
-            message: `Generate website error: ${error}`
-        });
+    }  catch (error) {
+    console.error(error);
+    return res.status(500).json({
+        message: `Generate website error: ${error}`
+    });
     }
 };

@@ -5,7 +5,7 @@ export const generateResponse = async (prompt) => {
     const res = await fetch(openRouterUrl, {
   method: 'POST',
   headers: {
-    Authorization: `Bearer ${process.env.OPENROUTER_API_KEY} `,
+    Authorization: `Bearer ${process.env.OPENROUTER_API_KEY}`,
    
     'Content-Type': 'application/json',
   },
