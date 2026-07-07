@@ -22,6 +22,7 @@ export const generateResponse = async (prompt) => {
       },
     ],
     temperature: 0.2,
+   
   }),
 });
 

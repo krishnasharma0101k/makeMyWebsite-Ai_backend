@@ -35,9 +35,14 @@ const websiteSchema = new mongoose.Schema({
         type: Boolean,
         default: false
     },
-    slug: {
+    deploymentUrl: {
         type: String,
         unique: true
+    },
+    slug: {
+        type: String,
+        unique: true,
+        
     }
     
 

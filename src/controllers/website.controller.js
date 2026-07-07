@@ -227,3 +227,23 @@ export const generateWebsite = async (req, res) => {
     });
     }
 };
+
+export const getWebsiteById = async (req, res) => {
+    try {
+        const website = await Website.findOne({
+            _id: req.params.id,
+            user: req.user._id
+        })
+
+        if (!website) {
+            return res.status(400).json({message: "website not fund"})
+        }
+
+        return res.status(200).json(website)
+
+    } catch (error) {
+         return res.status(500).json({
+        message: `get website by id  error: ${error}`
+    });
+    }
+}
