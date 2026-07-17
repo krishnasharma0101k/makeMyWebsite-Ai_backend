@@ -37,7 +37,7 @@ const websiteSchema = new mongoose.Schema({
     },
     deploymentUrl: {
         type: String,
-        unique: true
+        
     },
     slug: {
         type: String,

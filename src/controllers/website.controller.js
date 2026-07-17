@@ -278,7 +278,7 @@ export const change = async (req, res) => {
         const updatePrompt =` UPDATE This html
         
         current code:
-        ${Website.latestCode}
+        ${website.latestCode}
         
         User Resquest:
         ${prompt} 
@@ -308,12 +308,12 @@ export const change = async (req, res) => {
             return res.status(400).json({message: "ai returned invalid response"})   
         }
 
-        website.collection.push(
+        website.conversation.push(
+            {
+                role: "user", content: prompt
+            },
             {
                 role: "ai", content: parsed.message
-            },
-             {
-                role: "user", content: prompt
             }
         )
 
