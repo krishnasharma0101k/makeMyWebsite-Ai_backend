@@ -1,5 +1,5 @@
 const openRouterUrl = "https://openrouter.ai/api/v1/chat/completions"
-const model = "nvidia/nemotron-3-super-120b-a12b:free"
+const model = "deepseek/deepseek-chat"
 
 export const generateResponse = async (prompt) => {
     const res = await fetch(openRouterUrl, {
