@@ -31,11 +31,11 @@ const websiteSchema = new mongoose.Schema({
     conversation: [
         messageSchema
     ],
-    deployed: {
+    deploy: {
         type: Boolean,
         default: false
     },
-    deploymentUrl: {
+    deployUrl: {
         type: String,
         
     },
