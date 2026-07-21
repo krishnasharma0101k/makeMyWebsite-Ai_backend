@@ -6,7 +6,7 @@ const app = express()
 app.post("/api/stripe/wenhook", express.raw({type: "application"}), stripeWebhook)
 
 app.use(cors({
-    origin: "https://makemywebsite-ai.netlify.app/",
+    origin: "https://makemywebsite-ai.netlify.app",
     credentials: true
 }))
 
